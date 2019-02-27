@@ -1,0 +1,29 @@
+Update for Version 1.7.0 - Use of Better Pair making algorithm and use of noun tokens instead of noun_chunks cause we really who are we kidding! That shit ain't gonna work Darling!
+
+
+Version Details [Ch:Change, Nw:New]
+
+    <file:main.py>
+        Nw :: GLOBALS : SECTION_JOIN_THRESHHOLD, NODE_TAGS, MAX_CONNECTIONS, nlp
+        Ch :: set_extention(doc) fn. : Accepts doc object and sets extention to return the same doc object.
+        Ch :: make_unique(tokens) fn. : Accepts token_list and returns unique list by token.lemma.lower()
+        Ch :: def assign_values(edge_list, weight_matrix=None): The function directly accepts pairs
+        Ch :: get_relation(token1, token2) fn. : Adapt according to token instead of noun_chunk
+        Nw :: make_pair(text) fn. Accepts text and returns list of pairs based on semantic and positional relations.
+        {
+            set global doc object
+            set doc extentions
+            pperform SubTree Algorithm
+        }
+    <file:development.js>
+        Nw :: reset() fn. Resets html and graph
+        Ch :: <file> according to removal of sliding windows
+
+
+Previous Version differences:
+    <file:main.py>
+        - Remove : _sliding_window(iterable, size=2, step=1, fillvalue=None) fn:
+        - Remove : make_sliding_pairs(arr, **kwargs) fn:
+        -Partial Remove : assign_values(concept_list, weight_matrix=None, sliding_size=10) fn:
+    <file:new-output.html>
+        -Remove : Sliding Window div part

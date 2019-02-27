@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wireframe Input</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/new-input.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/new-input.css"> -->
+</head>
+<body>
+    <form method="POST" action="/get_cytoscape_json_for_text">
+        <div id="grid-container">
+                <div id="placeholder"><h1>Input Text</h1><p>Copy and Paste the Text for which the concept map is to be generated : </p></div>
+    			<textarea id="text-area" cols="10" rows="10" name="input-text"></textarea>
+    			<button id="submit-button" type="submit">Generate&#9654;</button>
+    	</div>
+    </form>
+</body>
+</html>

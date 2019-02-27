@@ -1,0 +1,137 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "Fjalla One", "Helvetica";
+	font-size: 18px;
+
+}
+
+.grid-container{
+	display: grid;
+	grid-template-rows: repeat(12, calc(96vh/12));
+	grid-template-columns: repeat(12, calc(96vw/12));
+	padding: 2vh 2vw;
+}
+
+#viewport{
+	grid-area: 1/1/13/13;
+	border: 3px solid black;
+}
+#config-area{
+	grid-area: 1/1/13/4;
+	background-color: #8db6f0;
+	border: 3px solid black;
+	border-right: none;
+}
+
+#map-area{
+	grid-area: 1/4/13/13;
+	border: 3px solid black;
+	background: #fff;
+}
+
+#profile-area{
+	grid-area: 1/1/2/4;
+	margin: 0px 5px 0px 5px;
+	border-bottom: thick solid black ;
+}
+
+#profile-icon{
+	grid-area: 2/1/1/2;
+	place-self: center;
+	font-size: 1em;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 100%;
+}
+
+#profile-title{
+	grid-area: 1/2/2/4;
+	align-self: center;
+	font-size: 1em;
+
+}
+
+#button-reset{
+	grid-area: 3/1/3/4;
+}
+
+#button-og-text{
+	grid-area: 4/1/4/4;
+}
+
+#origin-text-area{
+	grid-area: 5/1/7/4;
+	padding: 5px;
+	place-self: start center;
+}
+
+#origin-text{
+	font-size: 1em !important;
+	display:block;
+	width: 90%;
+	margin: auto;
+	overflow: scroll;
+	font-size: 14px;
+	text-align: justify;
+}
+
+#slider-area{
+	grid-area: 8/1/10/4;
+	padding: 5px;
+	place-self: center center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#sliding-area  p{
+	font-size: 0.5em !important;
+}
+
+input + span{
+	margin:20px;
+}
+
+#back-button-back{
+	grid-area: 12/1/12/4;
+}
+
+#map-zoom{
+	grid-area: 11/12/13/13;
+}
+
+.btn{
+}
+
+.btn>button{
+	width: 75%;
+	padding: 5px;
+	display: block;
+	margin: auto;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	background: white;
+	border: medium solid black;
+	border-radius: 5px;
+}
+
+.btn>button:active{
+	transform: translate(3px, 3px);
+	box-shadow: none;
+}
+
+#map-zoom > button {
+    border: 1px solid black;
+    width: 1.25em;
+    height: 1.25em;
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: white;
+}
+
+#map-zoom > button:active{
+	transform: scale(0.9);
+}

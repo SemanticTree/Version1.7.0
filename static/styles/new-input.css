@@ -1,0 +1,27 @@
+#grid-container{
+  height: 90vh;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(5, calc(90%/5));
+  grid-template-rows: repeat(5, calc(90%/5));
+  grid-gap: 10px;
+  padding: 2%;
+  justify-content: center;
+}
+#placeholder{
+  grid-area: 1/1/2/6;
+}
+
+#text-area{
+  grid-area: 2/1/5/6;
+  font-size: 2EM;
+  padding: 10px;
+}
+
+#submit-button{
+  font-size: 2em;
+  grid-area: 5/5/6/6;
+}
+#item1>*,#item2>*{
+  width: 100%;
+}
